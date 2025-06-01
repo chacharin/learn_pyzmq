@@ -19,7 +19,7 @@ publisher.bind("tcp://*:5555")
 time.sleep(1)
 
 while True:
-    topic = "msg1"  # หัวข้อของข้อความ (subscriber ต้อง subscribe ตามหัวข้อนี้)
+    topic = "msg1"  # Topic ของข้อความ (subscriber ต้อง subscribe ตามหัวข้อนี้)
     message = "Hello from original publisher"  # เนื้อหาข้อความ
     full_message = f"{topic} {message}"  # ต้องรวม topic และ message เข้าด้วยกัน เพราะ ZMQ แยกไม่ให้โดยอัตโนมัติ
 
