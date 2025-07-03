@@ -10,7 +10,7 @@ context = zmq.Context()
 # ---------- ส่วน Subscriber ----------
 # สร้าง socket แบบ SUB เพื่อรับข้อมูลจาก pub.py
 subscriber = context.socket(zmq.SUB)
-subscriber.connect("tcp://localhost:5555")  # เชื่อมต่อกับ Publisher ที่พอร์ต 5555
+subscriber.connect("tcp://*:5555")  # เชื่อมต่อกับ Publisher ที่พอร์ต 5555
 subscriber.setsockopt_string(zmq.SUBSCRIBE, "msg1")  # ติดตามเฉพาะข้อความที่มี Topic msg1
 
 # ---------- ส่วน Publisher ----------
