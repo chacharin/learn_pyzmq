@@ -6,7 +6,7 @@ import json
 
 context = zmq.Context()
 subscriber = context.socket(zmq.SUB)
-subscriber.connect("tcp://localhost:5560")
+subscriber.connect("tcp://*:5560")
 subscriber.setsockopt_string(zmq.SUBSCRIBE, "jsondata")  # ติดตามเฉพาะหัวข้อ jsondata
 
 while True:
